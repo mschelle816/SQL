@@ -1,0 +1,32 @@
+--Create a smoothie store database
+
+CREATE TABLE Smoothies (sku INTEGER PRIMARY KEY, flavor TEXT, oz INTEGER, calories INTEGER, protein INTEGER, popularity INTEGER);
+
+INSERT INTO smoothies VALUES (1, "Strawberry", 16, 350, 12, 95);
+INSERT INTO smoothies VALUES (2, "Chocolate Protein", 16, 475, 20, 80);
+INSERT INTO smoothies VALUES (3, "Very Berry", 16, 300, 12, 70);
+INSERT INTO Smoothies VALUES (4, "Coconut Dream", 16, 400, 8, 30);
+INSERT INTO Smoothies VALUES (5, "Peanut Butter Crunch", 16, 475, 15, 40);
+INSERT INTO Smoothies VALUES (6, "Vegan Machine", 16, 320, 10, 77);
+INSERT INTO Smoothies VALUES (7, "Berry Cherry", 16, 325, 5, 25);
+INSERT INTO Smoothies VALUES (8, "Starberry", 32, 700, 24, 45);
+INSERT INTO smoothies VALUES (9, "Chocolate Protein", 32, 950, 40, 60);
+INSERT INTO Smoothies VALUES (10, "Peanut Butter Crunch", 32, 950, 30, 20);
+INSERT INTO Smoothies VALUES (11, "Kids Strawberry", 8, 175, 6, 96);
+INSERT INTO Smoothies VALUES (12, "Kids Chocolate", 8, 250, 10, 91);
+INSERT INTO Smoothies VALUES (13, "Kids Peanut Butter", 8, 275, 10, 51);
+INSERT INTO Smoothies VALUES (14, "Kids Cherry", 8, 200, 7, 15);
+INSERT INTO Smoothies VALUES (15, "Kids Pineapple", 8, 250, 6, 30);
+
+--display the database ordered by flavor
+
+SELECT * FROM Smoothies
+ORDER BY flavor;
+
+--what are the most 3 popular itmes?
+
+SELECT  flavor, popularity
+FROM smoothies
+order by popularity desc
+limit 3;
+
